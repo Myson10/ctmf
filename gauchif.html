@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+  <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  
+  <body background="C:\Users\karim\OneDrive\Bureau\LDC\571559.jpg">.....</body>
+  
+  <img src="C:\Users\karim\OneDrive\Bureau\LDC\ctmf.png" alt="image" style="display: block; margin: auto;">
+</head>
+<body>
+
+          <h1 class=titre></h1>
+
+  
+  <div style="padding-top:145px;" class=" container-fluid" align="center">
+ 
+   
+    <div id='iptvPlayer' style="width:100%;"></div>
+ <script type="text/javascript">
+     function checkurl(myURL) {
+         if (myURL == "")
+         {
+             alert("Veuillez entrer le lien IPTV");
+             url.focus();
+             return false;
+         } else if (!/^((https?|s?ftp|rtmp|rtsp|mms):\/\/)[^\s\r\n\t\v\""\'\\\”]+$/i.test(myURL))
+         {
+             alert("Le lien IPTV que vous avez entré est incorrect");
+             url.focus();
+             return false;
+         }
+         return true;
+     }
+     var iptvmp = new LiveMP('iptvPlayer');
+ iptvmp.init({ bitrates: { hls: "https://live-hls-web-aje.getaj.net/AJE/06.m3u8" }, delayToFade: 2000, isLive: true, autoplay: true, labels: { bitrates: { auto: 'Auto', renditions: ['Auto'] }, hint: { sharing: 'Partage', quality: 'Qualité', speed: 'Vitesse', captions: 'légendes', audio: 'Audio', live: 'En direct', cast: 'Cast', airplay: 'Airplay', playlist: 'Playlist', related: 'En relation', upNext: 'Suivant' }, captions: { off: 'Off' }, error: { customErrorMessage: 'La visualisation n\'est pas disponible.', noSupportMessage: 'Aucun support de lecture.', noSupportDownload: 'Vous pouvez télécharger la vidéo ici.', noSupportInstallChrome: 'L\'utilisation de la dernière version de Google Chrome peut vous aider à afficher ce contenu.' }, ads: { controlBarCustomMessage: 'Annonce' } } });
+ </script> 
+     
+
+  <link type="text/css" rel="stylesheet" id="rmp-dress-code" href="liveplayer/css/mp_s1.min.css"><script async="" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script><link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css"><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/_/translate_http/_/js/k=translate_http.tr.fr.Z3Fo5a9m-EQ.O/d=1/exm=el_conf/ed=1/rs=AN8SPfprDnfVG0CVqGwte2PiW8Yt7vneiA/m=el_main"></script><script async="" src="liveplayer/js/hls.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.sendpulse.com/dist/css/push/sendpulse-prompt.min.css?v=31675378800000" media="all"></head>
+  <video id="my-video" class="video-js" controls>
+    <source src="https://live-hls-web-aje.getaj.net/AJE/06.m3u8" type="application/x-mpegURL">
+  </video>
+  <script>
+    var player = videojs('my-video');
+  </script>
+</body>
+</html>
